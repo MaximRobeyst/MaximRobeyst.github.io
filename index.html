@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio | Maxim Robeyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Style.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-container">
+    <h1><b> Maxim Robeyst </b></h1>
+    <h3> Engine Programmer </h3>
+  </div>
+</div>
+
+<!-- Sidebar/menu -->
+<div class="social-media">
+  <ul class="w3-collapse w3-dark w3-large">
+  </ul>
+</div>
+
+<ul class="navigationbar">
+  <div class="navigationbar-left">
+    <li><a href="#">Home</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#about"><i class="fa fa-file-pdf-o"></i> CV</a></li>
+  </div>
+  <div class="navigationbar-right">
+    <li><a href="https://www.linkedin.com/in/maxim-robeyst-208b83235/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a></li>
+    <li><a href="https://github.com/MaximRobeyst" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a></li>
+    <li><a href="mailto:maxim.robeyst@gmail.com" target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a></li>
+  </div>
+</ul>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content w3-main" style="margin-left:auto; max-width:1250px" style="">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>My Portfolio</b></h1>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="images/Mold_Mart.gif" alt="Mold Mart" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Mold Mart</b></p>
+        <p>Mold mart is a small game i made with 5 other people during the Crea week game jam</p>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i><a style="text-decoration: none" href="https://jnvcia.itch.io/mold-mart">Read More</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://user-images.githubusercontent.com/51368164/153592751-129cd394-81ca-4302-b1fc-ba12988f911a.gif" alt="Motor-3D" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Motor-3D</b></p>
+        <p>A 3D engine that i work on in my spare time powered by Directx and win32</p>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i><a style="text-decoration: none" href="https://github.com/MaximRobeyst/Motor3D">Read More</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="https://user-images.githubusercontent.com/51368164/151234725-63c1fe71-9e28-4ff9-88f7-aac666580fb5.gif" alt="GOAP" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>GOAP</b></p>
+        <p>A little Research project that i did during the gameplay programming course into the design of a Goal oriented action planning AI</p>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i><a style="text-decoration: none" href="https://github.com/MaximRobeyst/GOAP">Read More</a></button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Images/Burger_Time.JPG" alt="Motor-2D" style="width:100%;" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>(WORK IN PROGRESS) Motor-2D</b></p>
+        <p>A 2D engine made during the programming 4 course using SDL2 and openGL</p>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i><a style="text-decoration: none" href="https://github.com/MaximRobeyst/Motor2D">Read More</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Images/Raytracer.gif" alt="Graphics programming" style="width:100%" class="w3-hover-opacity ">
+      <div class="w3-container w3-white">
+        <p><b>Graphics Programming</b></p>
+        <p>During the graphics programming course we made a software raytracer and rasterizer and a simple hardware rasterizer</p>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i><a style="text-decoration: none" href="https://github.com/MaximRobeyst/GOAP">Read More</a></button>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Images/HotlineMiami.gif" alt="Hotline Miami" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Hotline Miami</b></p>
+        <p>A recreation of Hotline Miami during the Programming 1 course using SDL2</p>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i><a style="text-decoration: none" href="https://github.com/MaximRobeyst/Hotline_Miami_SDL">Read More</a></button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Images/Crash_Bandicoot.jpg" alt="Crash" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>(WORK IN PROGRESS) Crash Bandicoot</b></p>
+        <p>Making Crash bandicoot in the overlord engine</p>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-book w3-margin-right"></i><a style="text-decoration: none" href="https://github.com/MaximRobeyst/Overlord_x64">Read More</a></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="about" id="about">
+    <div>
+      <h4><b>About Me</b></h4>
+      <p>
+      Welkom! My name is Maxim and i'm a Game developer in my final year of DAE. Looking for an interesting internship for sprint 2023. my main interest
+      is in low level programming like engines and graphics. </p>
+    </div>
+    <img src="Images/Picture.jpg" class="w3-round"><br><br>
+  </div>
+    <hr>
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
