@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio | Maxim Robeyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Style.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body style="background-color:#131516;">
+
+<div class="header">
+  <div class="header-container" style="backgorund-color:#070707;">
+    <h1><b> Maxim Robeyst </b></h1>
+    <h3> Engine\Gameplay Programmer </h3>
+  </div>
+</div>
+
+<!-- Sidebar/menu -->
+<div class="social-media">
+  <ul class="w3-collapse w3-dark w3-large">
+  </ul>
+</div>
+
+<ul class="navigationbar" style="backgorund-color:#070707;">
+  <div class="navigationbar-left">
+    <li><a href="index.html#">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="Images/CV_Maxim_Robeyst.pdf">CV</a></li>
+    <!--<li><a href="#about"><i class="fa fa-file-pdf-o"></i> CV</a></li>-->
+  </div>
+  <div class="navigationbar-right">
+    <li><a href="https://www.linkedin.com/in/maxim-robeyst-208b83235/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a></li>
+    <li><a href="https://github.com/MaximRobeyst" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a></li>
+    <li><a href="mailto:maxim.robeyst@gmail.com" target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a></li>
+  </div>
+</ul>
+
+<div>
+  <div id="bigshots" style="padding:1%; margin-left: 10px; margin-right:10px">
+    <div>
+      <h1 style="font-size:36pt; text-align:center;"><b>Big Shots</b></h1> 
+      <div style="width:560px; height:315px; margin:auto;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=WY_Kv5R2aH4" style="margin:auto;"> </iframe> 
+      </div>
+      <p>
+        Big shots is a CO-OP VR Roguelike that released on Steam, Quest and Playstation VR2. my primary focus revolved around gameplay programming, while also taking on crucial responsibilities for networking and optimization systems.
+
+        </p>
+        <h2> Gameplay </h2>
+        <p>
+          A pivotal aspect of the game's success revolved around its weapons and upgrade systems. My role encompassed the creation of all four weapons featured in the game, as well as the majority of its upgrades.
+
+          Ensuring seamless gameplay experiences for both players was paramount, necessitating the networking of these systems.
+           This integration ensured that there was no disconnect between players, enhancing cooperative play and contributing to the overall enjoyment of the game.
+        </p>
+        <h2> Networking Systems </h2>
+        <p> 
+          In "Big Shots," a cooperative roguelike shooter, the gameplay dynamic demanded a significant number of projectiles to be active and updated simultaneously. However, our initial solution lacked networking capabilities,
+           leading to desynchronization issues where projectiles for each player could be in entirely different positions.
+
+          Furthermore, introducing a grenade launcher with bouncing projectiles posed a significant challenge within our non-networked system. 
+          Recognizing the necessity for synchronized gameplay experiences, we opted to implement a networked projectile system. This new system utilized buffers filled with data about our projectiles, 
+          ensuring that both players now experienced synchronized projectile movements. This enhancement not only resolved synchronization issues but also laid the groundwork for implementing more complex projectile mechanics in the future. </p>
+
+        <h2> Optimization </h2>
+
+        <p> 
+          One of the challenges we faced while developing our game for the Quest 2 was the performance cost of using skinned mesh renderers in Unity, 
+          which limited our ability to display multiple enemies efficiently. To address this, I proposed creating a custom skinning shader that could transform enemy meshes.
+           This shader allowed us to batch the transformations, and we used Unity's Job System to transfer bone data to the shader. This solution was crucial in optimizing the game for the Quest 2,
+            enabling us to achieve our performance target of 72 FPS. </p>
+
+        <h2> What i learned </h2>
+        <p>
+          This project marks my first commercially released game, developed as part of a talented team. I am extremely proud of what we accomplished together. Throughout the development process, 
+          I gained valuable experience in networking using Photon Fusion and collaborating effectively with programmers, designers, and artists. Additionally, I honed my skills in system architecture, C#,
+           and Unity programming. This project not only enhanced my technical abilities but also strengthened my ability to work cohesively within a multidisciplinary team.
+
+        </p>
+    </div>
+    <a href="https://bigshots-vr.com/" class="bigshots-link"></a><br><br>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content w3-main" style="margin-left:auto; margin-bottom:1rem; max-width:1250px" style="">
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
