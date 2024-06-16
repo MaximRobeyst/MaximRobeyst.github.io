@@ -57,27 +57,38 @@
         </p>
         <h2> Gameplay </h2>
         <p>
-          A pivotal aspect of the game's success revolved around its weapons and upgrade systems. My role encompassed the creation of all four weapons featured in the game, as well as the majority of its upgrades.
+          A pivotal aspect of the game's success was its weapons and upgrade systems. I was responsible for creating all four weapons featured in the game
+           and designing the majority of the upgrades. It was crucial to ensure that all upgrades, especially those altering weapon behavior,
+            were compatible with other complex upgrades.
 
-          Ensuring seamless gameplay experiences for both players was paramount, necessitating the networking of these systems.
-           This integration ensured that there was no disconnect between players, enhancing cooperative play and contributing to the overall enjoyment of the game.
+          Ensuring a seamless gameplay experience for all players was paramount, which required networking these systems.
+           This integration eliminated disconnects between players, enhancing cooperative play and significantly contributing to the overall enjoyment of the game.
         </p>
         <h2> Networking Systems </h2>
         <p> 
-          In "Big Shots," a cooperative roguelike shooter, the gameplay dynamic demanded a significant number of projectiles to be active and updated simultaneously. However, our initial solution lacked networking capabilities,
-           leading to desynchronization issues where projectiles for each player could be in entirely different positions.
+          In "Big Shots," a cooperative roguelike shooter, the gameplay dynamic demanded a significant number of projectiles to be active and updated simultaneously.
+          However, our initial solution lacked networking capabilities,
+          leading to desynchronization issues where projectiles for each player could be in entirely different positions.
 
           Furthermore, introducing a grenade launcher with bouncing projectiles posed a significant challenge within our non-networked system. 
-          Recognizing the necessity for synchronized gameplay experiences, we opted to implement a networked projectile system. This new system utilized buffers filled with data about our projectiles, 
-          ensuring that both players now experienced synchronized projectile movements. This enhancement not only resolved synchronization issues but also laid the groundwork for implementing more complex projectile mechanics in the future. </p>
+          Recognizing the necessity for synchronized gameplay experiences, I opted to implement a networked projectile system. This new system utilized buffers filled with data about our projectiles, 
+          ensuring that both players now experienced synchronized projectile movements. This enhancement not only resolved synchronization issues but also laid the 
+          groundwork for implementing more complex projectile mechanics in the future. 
+        
+        </p>
 
         <h2> Optimization </h2>
 
         <p> 
-          One of the challenges we faced while developing our game for the Quest 2 was the performance cost of using skinned mesh renderers in Unity, 
-          which limited our ability to display multiple enemies efficiently. To address this, I proposed creating a custom skinning shader that could transform enemy meshes.
-           This shader allowed us to batch the transformations, and we used Unity's Job System to transfer bone data to the shader. This solution was crucial in optimizing the game for the Quest 2,
-            enabling us to achieve our performance target of 72 FPS. </p>
+          One of the challenges I faced while developing our game for the Quest 2 was the performance cost of using skinned mesh renderers in Unity,
+           which limited our ability to display multiple enemies efficiently. To address this, I proposed and developed a custom skinning shader that could transform enemy meshes.
+            I designed this shader to batch the transformations and utilized Unity's Job System to transfer bone data to the shader.
+             My solution was crucial in optimizing the game for the Quest 2, enabling us to achieve our performance target of 72 FPS.
+        </p>
+        <p>
+          In addition to optimizing the GPU, I also improved system efficiency in the code by enhancing memory management and optimizing costly functions that ran during updates,
+           including Unity's resource-intensive UI updates.
+        </p>
 
         <h2> What i learned </h2>
         <p>
