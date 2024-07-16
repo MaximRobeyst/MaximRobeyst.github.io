@@ -101,17 +101,17 @@ li a:hover {
 }
 
 .about img {
-    float: block;
-    width: 20%;
+    float: right;
+    width: 22%;
     padding: 1rem;
     background-position: center;
     background-size: cover;
 }
 
 .about div {
-    float: left;
+    margin: auto;
     padding: 1rem;
-    width: 70%;
+    width: 90%;
 }
 
 footer {
