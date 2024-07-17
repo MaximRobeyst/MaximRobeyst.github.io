@@ -90,7 +90,24 @@
            including Unity's resource-intensive UI updates.
         </p>
 
-        <h2> What i learned </h2>
+        <h2> Tools </h2>
+        <p> 
+          tools where a big part of the development of big shots and i was responible for making some of the important ones that were essiential to shipping the game.
+          <h3> Platform Manager </h3>
+          "Big Shots" targeted multiple platforms, including Quest, PC, and PlayStation. This allowed us to leverage the capabilities of PC and PlayStation while managing costs
+           for Quest 2. For PlayStation and PC, we aimed to implement real-time shadows for our enemies and mechs, which was not feasible on Quest.
+            The Platform Manager tool enabled us to configure all lighting from any screen and bake lightmaps for the target platform using Bakery.
+             Each platform had its own settings, allowing us to specify the lightmap type (direct, indirect, etc.) and adjust lightmap quality.
+          <h3> Cheat menu </h3>
+          During development, we needed a way to accelerate the game or test specific features. To address this, I created the Cheat Menu,  which could be used in editor and in game.
+          This system was designed to be intuitive, enabling other developers to add cheats effortlessly. The system allowed calling certain cheats with parameters in-game.
+           For instance, to test a specific upgrade, developers simply needed to activate the cheat, and a comprehensive list of available upgrades would appear for testing.
+
+          <h3> Perfect object placer </h3>
+          Another tool I developed was the Perfect Object Placer. Unlike traditional methods that use physics raycasts to place objects in a scene, this tool utilized the available mesh data to ensure objects were placed perfectly on the ground.
+        </p>
+
+        <h2> What I learned </h2>
         <p>
           This project marks my first commercially released game, developed as part of a talented team. I am extremely proud of what we accomplished together. Throughout the development process, 
           I gained valuable experience in networking using Photon Fusion and collaborating effectively with programmers, designers, and artists. Additionally, I honed my skills in system architecture, C#,
