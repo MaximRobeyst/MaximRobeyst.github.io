@@ -150,3 +150,14 @@ footer {
     height: 100px;
     margin: auto;
 }
+
+.coloracube-link {
+    display: block;
+    background: url(Images/coloracube.jpg);
+    background-size: contain, cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 100px;
+    margin: auto;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio | Maxim Robeyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Style.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body style="background-color:#131516;">
+
+<div class="header">
+  <div class="header-container" style="backgorund-color:#070707;">
+    <h1><b> Maxim Robeyst </b></h1>
+    <h3> Engine\Gameplay Programmer </h3>
+  </div>
+</div>
+
+<!-- Sidebar/menu -->
+<div class="social-media">
+  <ul class="w3-collapse w3-dark w3-large">
+  </ul>
+</div>
+
+<ul class="navigationbar" style="backgorund-color:#070707;">
+  <div class="navigationbar-left">
+    <li><a href="index.html#">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="Images/CV_Maxim_Robeyst.pdf">CV</a></li>
+    <!--<li><a href="#about"><i class="fa fa-file-pdf-o"></i> CV</a></li>-->
+  </div>
+  <div class="navigationbar-right">
+    <li><a href="https://www.linkedin.com/in/maxim-robeyst-208b83235/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a></li>
+    <li><a href="https://github.com/MaximRobeyst" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a></li>
+    <li><a href="mailto:maxim.robeyst@gmail.com" target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a></li>
+  </div>
+</ul>
+
+<div>
+  <div id="colorACube" style="padding:1%; margin-left: 10px; margin-right:10px">
+    <div>
+      <h1 style="font-size:36pt; text-align:center;"><b>Color A Cube</b></h1> 
+      <div style="width:560px; height:315px; margin:auto;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0lLW5kXhU24?si=vbUSliZ-jKtsHzhw" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share style="margin:auto;"> </iframe> 
+      </div>
+      <p>
+        <b>Role</b>: Main Gameplay Programmer (Prototype to Finished Product)</br>
+      </br>
+        <b>Overview: </b>
+        Color-a-Cube is a VR painting experience that allows players to paint 3D models interactively. I was the main gameplay programmer, contributing to the project from its inception as a prototype to its final release. The game’s development presented numerous challenges, especially in optimizing performance for VR hardware like the Meta Quest 2.
+              
+        <h2>Gameplay:</h2>
+              
+        <ul>      
+        <li><h3>Core Painting Mechanic:</h3></li>
+        <ul>
+          <li>Implemented a painting system that uses raycasting from the VR controller to determine intersections with the model.</li>
+          <li>Initial implementation was computationally expensive, particularly for detailed models. To address this, I leveraged compute shaders for optimization.</li>
+          <li>Further optimization was required for larger models. Transitioned to a Bounding Volume Hierarchy (BVH) structure, reducing painting computations to 0.2ms per frame.</li>
+        </ul>  
+        <li><h3>Voxel Model Transition:</h3></li>
+        <ul> 
+          <li>The game originally utilized traditional polygonal models for painting. However, corporate direction necessitated a shift to voxel-based models.</li>
+          <li>Designed a system to map triangles to their corresponding voxels. Initially used compute shaders to check if triangles near the selected one were inside a voxel.</li>
+          <li>The computational demands of the Quest 2’s GPU led to integrating the BVH structure for this process, significantly enhancing performance.</li>
+        </ul>
+        <li><h3>Texture Masking:</h3></li>
+        <ul>
+          <li>Integrated command buffers to generate a "mask texture" for each model. This texture is used by the shader to apply colors to painted areas, leaving non-painted sections rendered in a default color.</li>
+        </ul> 
+      </ul>
+           
+        <h2>Tools:</h2>
+        <ul>
+        <li><h3>Voxel Counter:</h3></li>
+        <ul>
+        <li>Developed a tool to calculate the size of voxel-based models by counting only surface voxels (excluding internal ones) from MagicaVoxel’s .point file.</li>
+        <li>This provided artists with accurate size metrics for their models before export.</li>
+        </ul>
+        <li><h3>Custom Assigner Tool:</h3></li>
+        <ul>   
+        <li>Developed a system allowing artists to assign colors to models exported as FBX files efficiently.    </li>
+        <li>Features included the ability to color specific triangles, quads, voxels, and UV islands.</li>
+        <li>Artists could also select a texture to sample and use it to assign colors directly or paint a custom texture using the tool.</li>
+        <li>Integrated undo/redo functionality using the Memento design pattern, ensuring flexibility and efficiency for artists. Created an advanced tool to streamline the process of assigning colors to models exported as FBX files.</li>
+        <li>Features included the ability to color specific triangles, quads, voxels, and UV islands.</li>
+        <li>Integrated undo/redo functionality using the Memento design pattern, ensuring flexibility and efficiency for artists.</li>
+        </ul>
+              
+              
+        <h2>Graphics:</h2>
+        <ul>
+          <li><h3>Outline Shader:<h3></li>
+            <ul>
+        <li>Designed and implemented a custom outline shader using Unity’s Scriptable Render Pipeline (SRP).</li>
+        <li>The shader creates outlines by blurring culled silhouettes of the selected voxel and blending them into the final image. this only takes 3 passes.</li>
+        <li>Configurable by designers to adjust colors and blending, allowing for creative control over the visual style.</li>
+            </ul>
+      </ul>
+              
+        <h2>Technologies Used:</h2>
+       <ul>       
+        <li><b>Compute Shaders</b>: Optimized computationally heavy tasks like raycasting and voxelization.</li>
+        <li><b>Bounding Volume Hierarchy (BVH)</b>: Enhanced performance for complex models and voxel-based systems.</li>
+        <li><b>Command Buffers</b>: Enabled efficient texture manipulation for the painting mechanic.</li>
+        <li><b>Memento Design Pattern</b>: Provided robust undo/redo functionality for artist tools.  </li>
+        <li><b>Scriptable Render Pipeline (SRP)</b>: Implemented custom graphics features like the outline shader.</li>
+       </ul>
+
+       <br>
+        <b>Outcome:</b>
+        The final product delivered a seamless and immersive painting experience in VR. By addressing both technical and artistic challenges, the project achieved high performance, adaptability for voxel models, and a visually striking presentation.
+      </p>
+    </div>
+    <a href="https://www.meta.com/nl-nl/experiences/color-a-cube/8774301352666408/" class="coloracube-link"></a><br><br>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content w3-main" style="margin-left:auto; margin-bottom:1rem; max-width:1250px" style="">
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
